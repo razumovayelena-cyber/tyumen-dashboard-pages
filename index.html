@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) { return; }
+      }
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=112546302', 'ym');
+
+    ym(112546302, 'init', {
+      ssr: true,
+      webvisor: true,
+      clickmap: true,
+      ecommerce: 'dataLayer',
+      referrer: document.referrer,
+      url: location.href,
+      accurateTrackBounce: true,
+      trackLinks: true,
+      trackHash: true
+    });
+  </script>
+  <!-- /Yandex.Metrika counter -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Тюмень · Результаты апробации Стандарта: проекты для внедрения</title>
+  <link rel="stylesheet" href="lib/leaflet.css" />
+  <link rel="stylesheet" href="css/dashboard.css?v=20260914-jump" />
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/112546302" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <nav class="nav">
+    <a class="nav-logos" href="#obzor" aria-label="Тюмень 440, АСИ, АТРЭ">
+      <img src="img/tumen440.png?v=20260912-brand-p10" alt="Тюмень 440" />
+      <img src="img/asi.svg" alt="АСИ" />
+      <img src="img/atre.png?v=4" alt="АТРЭ" />
+    </a>
+    <div class="nav-links">
+      <a href="#obzor" class="is-on">Обзор</a>
+      <a href="#itogi">Результаты апробации</a>
+      <a href="#territorii">Эффекты от пилотов</a>
+      <a href="#capex">Инвестиции в пилоты</a>
+      <a href="#scenarii">Сценарии</a>
+      <a href="#otchet">Выгрузить отчет</a>
+    </div>
+  </nav>
+
+  <main class="app-main">
+  <header class="hero pane is-on" id="obzor">
+    <div class="hero-copy">
+      <div>
+        <div class="kicker">Апробация Стандарта здоровой среды в населенных пунктах</div>
+        <h1>Результаты и проекты для внедрения в г.Тюмень</h1>
+        <p class="lede">Пилотные территории: мкрн Оброчное и мкрн ДОК.</p>
+      </div>
+    </div>
+    <div class="hero-map">
+      <div id="map"></div>
+      <div class="map-tools">
+        <button type="button" class="is-on" data-focus="all">Общий вид</button>
+        <a href="#territory-ob">мкрн Оброчное</a>
+        <a href="#territory-dok">мкрн ДОК</a>
+      </div>
+      <div class="map-legend">
+        <div><i class="poly"></i>Контуры озеленения</div>
+        <div><i class="shore"></i>Линии берегоукрепления · 5,05 км</div>
+        <div><i class="bridge"></i>Пешеходный мост · 303 м</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="block pane" id="itogi">
+    <nav class="itogi-toc" id="itogi-toc" aria-label="Содержание раздела"></nav>
+    <div class="itogi-scroll">
+    <div class="wrap">
+      <h2 id="itogi-analiz">Результаты апробации</h2>
+      <p class="sub">Результаты апробации основаны на анализе 231 показателя Стандарта<div class=""></div></p>
+
+      <div class="science">
+        <div class="sci">
+          <div class="big">Устойчивый рост ОПЖ</div>
+          <p>Рост связнан со снижением смертности от инфекций и от внешних причин, включая ДТП. Кроме того, экономический рост в городе создает дополнительные стимулы у населения к сохранению здоровья
+        </div>
+        <div class="sci">
+          <div class="big">Риски города - рост заболеваемости хроническими болезнями </div>
+          <p>Увеличение ОПЖ "упирается" в хронические болезни (диабет, гипертония), а также в заболеваемость органов дыхания</p>
+        </div>
+        <div class="sci">
+          <div class="big">Среда-ключевой резерв для роста ОПЖ</div>
+          <p>Хронические болезни плохо поддаются только медицинской терапии - они во многом зависят от среды и повседневных привычек</p>
+        </div>
+      </div>
+
+      <h3 class="block-h3">Ключевые показатели здоровой среды г. Тюмени</h3>
+      <p class="sub tight">Период анализа:  2016-2025 гг.</p>
+
+      <div class="stat-group tone-pine">
+        <h4>Сильные стороны города</h4>
+        <div class="grid-stats">
+          <div class="stat">
+            <div class="num">73,6 <span class="fromto" aria-hidden="true"></span> 77,0</div>
+            <div class="lbl">ОПЖ при рождении, лет</div>
+            <div class="hint">к 2023 году «лёгкие» резервы ОПЖ уже исчерпаны</div>
+          </div>
+          <div class="stat">
+            <div class="num">51,5 <span class="fromto" aria-hidden="true"></span> 62,9%</div>
+            <div class="lbl">доля занимающихся спортом</div>
+            <div class="hint">жители активно вовлекаются в занятия спортом, но предел не достигнут</div>
+          </div>
+          <div class="stat">
+            <div class="num">4,2 <span class="fromto" aria-hidden="true"></span> 2,5</div>
+            <div class="lbl">младенческая смертность, на 1 000 родившихся</div>
+            <div class="hint">детские заболеваемость и смертность вносят основной вклад в снижение ОПЖ</div>
+          </div>
+          <div class="stat">
+            <div class="num">8,6 <span class="fromto" aria-hidden="true"></span> 5,8</div>
+            <div class="lbl">смертность от ДТП, на 100 тыс.</div>
+            <div class="hint">Внешние причины, включая ДТП - факторы на которые воздействовать проще всего  </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-group tone-sand">
+        <h4>Явные риски и проблемы</h4>
+        <div class="grid-stats">
+          <div class="stat">
+            <div class="num">42,5 <span class="fromto" aria-hidden="true"></span> 67,8</div>
+            <div class="lbl">сахарный диабет, общая заболеваемость, на 1 000</div>
+            <div class="hint">2016–2025 · рост около 60%. Влияет на снижение производительности труда и инвалидизацию</div>
+          </div>
+          <div class="stat">
+            <div class="num">9,6 <span class="fromto" aria-hidden="true"></span> 28,6</div>
+            <div class="lbl">первичная артериальная гипертензия, на 1 000</div>
+            <div class="hint">2016–2025 · почти трехкратный рост. Влияет на рост смертности от ССЗ.</div>
+          </div>
+          <div class="stat">
+            <div class="num">152,9 <span class="fromto" aria-hidden="true"></span> 275,5</div>
+            <div class="lbl">болезни органов дыхания, первичная заболеваемость, на 1 000</div>
+            <div class="hint">2016–2025 · +80%</div>
+          </div>
+          <div class="stat">
+            <div class="num">1 510 <span class="fromto" aria-hidden="true"></span> 1 741</div>
+            <div class="lbl">ожирение детей 0–17, на 100 тыс.</div>
+            <div class="hint">отложенная нагрузка через 20–30 лет</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-group tone-river">
+        <h4>Неустойчивая картина</h4>
+        <div class="grid-stats">
+          <div class="stat">
+            <div class="num">425 <span class="fromto" aria-hidden="true"></span> 379</div>
+            <div class="lbl">смертность от ССЗ, на 100 тыс.</div>
+            <div class="hint">снижается, но заболеваемость ССЗ растёт. Нагрузка на систему здравоохранения и инвалидизация</div>
+          </div>
+          <div class="stat">
+            <div class="num">18,8 <span class="fromto" aria-hidden="true"></span> 20,7</div>
+            <div class="lbl">доля старше трудоспособного возраста, %</div>
+            <div class="hint">город растёт и одновременно стареет.</div>
+          </div>
+          <div class="stat">
+            <div class="num">55 <span class="fromto" aria-hidden="true"></span> 90 м²</div>
+            <div class="lbl">зелень на жителя по городу</div>
+            <div class="hint">средний метр ≠ парк за 15 минут у дома.</div>
+          </div>
+          <div class="stat">
+            <div class="num">143 <span class="fromto" aria-hidden="true"></span> 151</div>
+            <div class="lbl">смертность от новообразований, на 100 тыс.</div>
+            <div class="hint">растёт, при этом первичная заболеваемость снижается (с 15,7 до 13,8 на 1 000 чел.).</div>
+          </div>
+        </div>
+      </div>
+     
+      <div id="pavodok">
+        <h2 id="itogi-kontekst">Контекст апробации Стандарта</h2>
+        <h3 class="block-h3">Летнее наводнение 2026</h3>
+         <p class="sub">Летний подъём Туры — второй за историю наблюдений с 1891 года. Опасная отметка 850 см держалась около 17 суток.</p>
+        <div class="timeline">
+          <div class="tl"><div class="y">1979</div><div class="v">915 см</div><div class="t">абсолютный рекорд</div></div>
+          <div class="tl"><div class="y">2016</div><div class="v">868 см</div><div class="t">весна</div></div>
+          <div class="tl"><div class="y">весна 2026</div><div class="v">684 см</div><div class="t">весенний пик, без ЧС</div></div>
+          <div class="tl alert"><div class="y">лето 2026</div><div class="v">896–897 см</div><div class="t">лето, режим ЧС с 28 июля</div></div>
+                  </div>
+        <div class="panel" style="margin-top:24px">
+          <h3>Уровень Туры, лето 2026</h3>
+          <p class="note">Оперативные отметки по открытым сводкам. Красная линия — порог опасного явления (ОЯ).</p>
+          <div class="chart-box tall"><canvas id="chart-flood"></canvas></div>
+        </div>
+
+        <h3 class="block-h3">Ущерб от наводнения для г. Тюмени</h3>
+        <p class="sub tight">Сводка по открытым источникам на конец августа 2026</p>
+        <div class="grid-stats">
+          <div class="stat">
+            <div class="num">151</div>
+            <div class="lbl">жилых домов в зоне подтопления</div>
+            <div class="hint">Тюмень, Тюменский и Ярковский округа · ~17 августа</div>
+          </div>
+          <div class="stat">
+            <div class="num">2 056</div>
+            <div class="lbl">приусадебных участков</div>
+            <div class="hint">тот же контур, середина августа</div>
+          </div>
+          <div class="stat">
+            <div class="num">412 + 153</div>
+            <div class="lbl">жилых и садовых домов к санобработке в городе</div>
+            <div class="hint">площадь 25 га · Тюмень</div>
+          </div>
+          <div class="stat">
+            <div class="num">29</div>
+            <div class="lbl">населённых пунктов в зоне подтопления</div>
+            <div class="hint">Тура и Пышма · 1 августа</div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:24px">
+          <h3>Что пострадало</h3>
+          <p class="note">Основной ущерб — имущество, участки, коммуникации и санитарное состояние. Погибших в открытых сводках по ЧС в Тюмени не сообщалось.</p>
+          <ul class="harm-list">
+            <li>В городе уязвимы Старая Зарека, Береговая, мкрн ДОК и Лесобаза (Томская, Спартака, Верещагина, Сеченова, Барабинская), нижние ярусы набережной, СНТ «Родничок», «Дубрава», «Осень», «Берёзка» и др.</li>
+            <li>Питьевая вода: Метелевский водозабор (~60% сети) не справился с потоком органики, которая сошла с затопленных полей; за 30 дней разобрано 3 378,5 м³ привозной воды, пик 235 м³/сутки.</li>
+            <li>Замор рыбы ~400 т: кислород в Туре снизился до 0,8 мг/л при норме ~6 мг/л, урожай на подтопленных огородах признан непригодным.</li>
+            <li>Эвакуация на пике: 53 человека (9 детей) 1 августа, позже по Богандинскому / Пышме — 66 чел.</li>
+          </ul>
+        </div>
+      </div>
+          
+      <h3 class="block-h3" id="itogi-prk">Природно-рекреационный каркас г. Тюмени</h3>
+      <p class="sub">Город уже развивает решения в области озеленения и благоустройства</p>
+      <div class="prk-map-wrap">
+        <div class="prk-map" id="map-prk"></div>
+        <div class="map-legend on-light">
+          <div><i class="prk"></i>Природно-рекреационный каркас</div>
+          <div><i class="poly"></i>Пилотные территории</div>
+          <div><i class="shore"></i>Берегоукрепление</div>
+          <div><i class="bridge"></i>Пешеходный мост</div>
+        </div>
+      </div>
+      <div class="heading-with-jump">
+        <h2 id="itogi-resheniya" data-toc="Решения для внедрения">ПРК+Стандарт: решения для внедрения на пилотных территориях</h2>
+        <a class="jump-pane" href="#territorii">Эффекты от пилотов</a>
+      </div>
+      <p class="sub tight">Результаты апробации Стандарта могут быть интегрированы в ПКР города в рамках пилотных территорий - <strong>мкрн "ДОК" и мкрн "Оброчное"</strong>.</p>
+      <p class="sub">Обе территории имеют сложий класс проблем - развитие жилой застройки, уязвимость к подтоплению и отсутствие пешего доступа к благоустроенным зеленым территориям</p>
+
+      <div class="grid-2" style="margin-top:28px">
+        <article class="panel">
+          <div class="kicker">Решение 1</div>
+          <h3>Берегоукрепление</h3>
+          <p class="note">Строительство защитных сооружений для защиты от наводнений для двух наиболее уязвимых микрорайонов города.</p>
+          <div class="meta" id="i-shore-meta"></div>
+          <ul class="findings">
+            <li>Изменение климата и потепление увеличивают вероятность наводнений, при этом ряд новых райнов города возводится на уязвимых территориях.</li>
+            <li>15 097 жителей и 144 объекта — верхняя граница экспозиции до пространственной проверки зоны подтопления.</li>
+            <li>Эффект от берегоукрепления носит и экономический, и социальный характер.</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <div class="kicker">Решение 2</div>
+          <h3>Благоустройство и озеленение рекреационных территорий</h3>
+          <p class="note">Обеспечение 15-минутной доступности лесопарковых территорий для пеших прогулок.</p>
+          <div class="meta" id="i-amen-meta"></div>
+          <ul class="findings">
+            <li>В городе нарастает проблема хронических неинфекционных заболеваний (ХНИЗ), которые существенно ограничивают и ОПЖ и производительность труда.</li>
+            <li>Не все районы города обеспечены зелеными территориями для пеших прогулок. В частности, район "Оброчное" зажат между жилой застройкой и промышленными предприятиями.</li>
+            <li>Для Оброчного необходимо строительства моста для доступа к комфортной лесопарковой зоне.</li>
+          </ul>
+        </article>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <section class="block pane" id="territorii">
+    <div class="wrap wide">
+      <h2>Эффекты от пилотов</h2>
+      <p class="sub"> Проблема: уявзимость к подтоплениям и недостаток обустроенных зеленых территорий для пеших прогулок (15-минутная доступность)</p>
+      <div class="grid-2">
+        <article class="panel" id="territory-ob">
+          <div class="kicker">Часть 1 · 183,02 га</div>
+          <h3>мкрн Оброчное</h3>
+          <p class="note">Основная задача: обеспечение пешего доступа к зеленым территориям.</p>
+          <div class="territory-map" id="map-p1"></div>
+          <div class="map-legend on-light">
+            <div><i class="poly"></i>Контур озеленения</div>
+            <div><i class="shore"></i>Берегоукрепление · 1 510 м</div>
+            <div><i class="bridge"></i>Пешеходный мост · 303 м</div>
+          </div>
+          <section class="territory-group">
+            <h4>Характеристики</h4>
+            <div class="meta" id="char-p1"></div>
+          </section>
+          <section class="territory-group">
+            <h4>Мероприятия</h4>
+            <div class="meta" id="acts-p1"></div>
+          </section>
+          <section class="territory-group">
+            <h4>Расходы</h4>
+            <div class="meta" id="cost-p1"></div>
+          </section>
+          <h3 class="territory-effects-title">Эффекты от пилотных проектов</h3>
+          <section class="territory-group tone-econ">
+            <h4>Экономика</h4>
+            <h5>Озеленение и благоустройство</h5>
+            <div class="grid-stats cols-2" id="econ-amenity-p1"></div>
+            <h5>Берегоукрепление</h5>
+            <div class="grid-stats cols-2" id="econ-shore-p1"></div>
+          </section>
+          <section class="territory-group tone-eco">
+            <h4>Экология</h4>
+            <div class="grid-stats cols-2" id="eco-p1"></div>
+          </section>
+          <section class="territory-group tone-health">
+            <h4>Здоровье</h4>
+            <h5>Озеленение и благоустройство</h5>
+            <div class="grid-stats cols-2" id="health-amenity-p1"></div>
+          </section>
+        </article>
+        <article class="panel" id="territory-dok">
+          <div class="kicker">Часть 2 · 235,77 га</div>
+          <h3>мкрн ДОК</h3>
+          <p class="note">Основная задача: защита застройки от подтопления.</p>
+          <div class="territory-map" id="map-p2"></div>
+          <div class="map-legend on-light">
+            <div><i class="poly"></i>Контур озеленения</div>
+            <div><i class="shore"></i>Берегоукрепление · 3 538 м</div>
+          </div>
+          <section class="territory-group">
+            <h4>Характеристики</h4>
+            <div class="meta" id="char-p2"></div>
+          </section>
+          <section class="territory-group">
+            <h4>Мероприятия</h4>
+            <div class="meta" id="acts-p2"></div>
+          </section>
+          <section class="territory-group">
+            <h4>Расходы</h4>
+            <div class="meta" id="cost-p2"></div>
+          </section>
+          <h3 class="territory-effects-title">Эффекты от пилотных проектов</h3>
+          <section class="territory-group tone-econ">
+            <h4>Экономика</h4>
+            <h5>Озеленение и благоустройство</h5>
+            <div class="grid-stats cols-2" id="econ-amenity-p2"></div>
+            <h5>Берегоукрепление</h5>
+            <div class="grid-stats cols-2" id="econ-shore-p2"></div>
+          </section>
+          <section class="territory-group tone-eco">
+            <h4>Экология</h4>
+            <div class="grid-stats cols-2" id="eco-p2"></div>
+          </section>
+          <section class="territory-group tone-health">
+            <h4>Здоровье</h4>
+            <h5>Озеленение и благоустройство</h5>
+            <div class="grid-stats cols-2" id="health-amenity-p2"></div>
+          </section>
+        </article>
+      </div>
+
+      <section class="method-official" id="territorii-method">
+        <h2>Методология оценки эффектов</h2>
+        <p class="sub">Оценка выполнена по 2 пилотным территориям на горизонте 20 лет эксплуатации. Экономический, экологический и медико-социальный контуры рассматриваются раздельно. Суммирование разнородных показателей в единый интегральный эффект не применяется.</p>
+        <div class="grid-3">
+          <article class="panel tone-econ">
+            <div class="kicker">Экономика</div>
+            <h3>Валовая добавленная стоимость и бюджетный эффект</h3>
+            <p class="note">Прямая валовая добавленная стоимость строительства определяется как локализованная часть капитальных затрат без НДС, умноженная на отраслевую долю добавленной стоимости строительства по данным Росстата. В показатель на вкладке не включаются эксплуатационные эффекты.</p>
+            <p class="note">Отдельно оценивается экономическая активность посетителей благоустроенных территорий. В расчёт принимаются постоянные жители пилотных территорий, а также 2% остального населения города Тюмени. Принимается 8 посещений в год, доля посещений с расходами — 45%, средний чек — 350 ₽. Полученный оборот корректируется на долю средств, остающихся в экономике города, и на долю добавленной стоимости в услугах. Косвенные и индуцированные эффекты учитываются сценарным коэффициентом и не смешиваются с добавленной стоимостью строительства.</p>
+            <p class="note">Налоги и страховые взносы рассчитываются по контрольным показателям налоговой нагрузки строительства. Предотвращённые бюджетные выплаты при подтоплении оцениваются только в части единовременной материальной помощи и не отождествляются с полным имущественным ущербом.</p>
+          </article>
+          <article class="panel tone-eco">
+            <div class="kicker">Экология</div>
+            <h3>Поглощение углекислого газа и удержание стока</h3>
+            <p class="note">Экологический эффект определяется как разница между сценарием реализации проекта и сохранением существующей растительности. Существующий смешанный лес и кустарник не рассматриваются как результат проекта.</p>
+            <p class="note">Дополнительное поглощение углекислого газа рассчитывается только по чисто дополнительным посадкам. В базовом сценарии принимается, что дополнительными являются 10% проектного числа деревьев, приживаемость составляет 85%, а средний коэффициент зрелости насаждений за период 20 лет — 0,6. Поглощение газоном и выбросы строительства в итог не включаются.</p>
+            <p class="note">Дополнительное удержание поверхностного стока оценивается относительно существующего лесного покрова. В базовом сценарии принято чистое увеличение удержания в размере 8 мм в год на площадь зоны воздействия. Показатель носит сценарный характер: при увеличении водонепроницаемых покрытий эффект может снижаться либо менять знак.</p>
+          </article>
+          <article class="panel tone-health">
+            <div class="kicker">Здоровье</div>
+            <h3>Предотвращённые потери здоровой жизни</h3>
+            <p class="note">Медико-социальный эффект выражается в годах здоровой жизни, которые удаётся сохранить в результате проекта. Применяется стандартная конструкция: годы жизни, потерянные вследствие преждевременной смерти, суммируются с годами жизни, прожитыми при нарушении здоровья. Основной результат не дисконтируется.</p>
+            <p class="note">В расчёт предотвращённых лет потерянной жизни включены каналы физической активности, повышенной температуры воздуха и загрязнения взвешенными частицами PM2.5. Годы жизни с нарушением здоровья учтены только по каналу психического здоровья. Последствия подтоплений для здоровья населения, а также эффект диоксида азота в итог не входят во избежание двойного учёта и вследствие недостатка исходных данных.</p>
+            <p class="note">Полный эффект формируется постепенно в течение 5 лет в соответствии с методикой Всемирной организации здравоохранения. Полученные значения относятся к сценарной оценке высокой неопределённости и не заменяют локальное эпидемиологическое исследование.</p>
+          </article>
+        </div>
+      </section>
+
+      <dialog id="effect-method" class="modal" aria-labelledby="effect-method-title">
+        <div class="modal-card">
+          <div class="modal-head">
+            <h3 id="effect-method-title">Методика</h3>
+            <button type="button" class="modal-close" data-close="effect-method" aria-label="Закрыть">×</button>
+          </div>
+          <div id="effect-method-body"></div>
+        </div>
+      </dialog>
+    </div>
+  </section>
+
+  <section class="block pane" id="capex">
+    <div class="wrap">
+      <h2>Структура вложений</h2>
+      <p class="sub">Компонентный CAPEX — нижняя оценка, без НДС.</p>
+
+      <article class="district" id="capex-dok">
+        <header class="district-head">
+          <div>
+            <div class="kicker">Часть 2</div>
+            <h3>мкрн ДОК</h3>
+            <p>235,77 га · берегоукрепление по Туре 3 538 м · без моста</p>
+          </div>
+          <div class="district-sum">
+            <div class="num" id="capex-dok-total">—</div>
+          </div>
+        </header>
+        <div class="capex-unpack">
+          <div class="panel capex-whole">
+            <div class="kicker">Весь CAPEX территории</div>
+            <div class="chart-box"><canvas id="chart-capex-p2"></canvas></div>
+          </div>
+          <div class="capex-articles">
+            <div class="panel capex-article tone-green">
+              <h3>Озеленение</h3>
+              <div class="article-sum" id="green-sum-p2">—</div>
+              <p class="note" id="green-note-p2">зона посадок мкрн ДОК</p>
+              <div class="bars" id="green-bars-p2"></div>
+            </div>
+            <div class="panel capex-article tone-amenity">
+              <h3>Благоустройство</h3>
+              <div class="article-sum" id="amenity-sum-p2">—</div>
+              <p class="note" id="amenity-note-p2">активная зона мкрн ДОК</p>
+              <div class="bars" id="amenity-bars-p2"></div>
+            </div>
+            <div class="panel capex-article tone-eng">
+              <h3>Инженерная защита</h3>
+              <div class="article-sum" id="eng-sum-p2">—</div>
+              <p class="note">Берег, ливневая канализация, очистка стока</p>
+              <div class="bars" id="eng-bars-p2"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="district" id="capex-ob">
+        <header class="district-head">
+          <div>
+            <div class="kicker">Часть 1</div>
+            <h3>мкрн Оброчное</h3>
+            <p>183,02 га · берегоукрепление 1 510 м · пешеходный мост 303 м</p>
+          </div>
+          <div class="district-sum">
+            <div class="num" id="capex-ob-total">—</div>
+          </div>
+        </header>
+        <div class="capex-unpack">
+          <div class="panel capex-whole">
+            <div class="kicker">Весь CAPEX территории</div>
+            <div class="chart-box"><canvas id="chart-capex-p1"></canvas></div>
+          </div>
+          <div class="capex-articles">
+            <div class="panel capex-article tone-green">
+              <h3>Озеленение</h3>
+              <div class="article-sum" id="green-sum-p1">—</div>
+              <p class="note" id="green-note-p1">зона посадок Оброчного</p>
+              <div class="bars" id="green-bars-p1"></div>
+            </div>
+            <div class="panel capex-article tone-amenity">
+              <h3>Благоустройство</h3>
+              <div class="article-sum" id="amenity-sum-p1">—</div>
+              <p class="note" id="amenity-note-p1">активная зона Оброчного</p>
+              <div class="bars" id="amenity-bars-p1"></div>
+            </div>
+            <div class="panel capex-article tone-eng">
+              <h3>Инженерная защита</h3>
+              <div class="article-sum" id="eng-sum-p1">—</div>
+              <p class="note">Берег, ливневая канализация, очистка стока, мост</p>
+              <div class="bars" id="eng-bars-p1"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="table-wrap" style="margin-top:8px">
+        <table class="data" id="tbl-capex"></table>
+      </div>
+      <p class="footnote" id="ncs-note"></p>
+
+      <h3 class="block-h3" id="capex-funding">Потенциальные источники финансирования</h3>
+
+      <article class="panel funding-viz" id="funding-viz">
+        <h3>Потенциальные источники из федерального бюджета или внебюджетных средств</h3>
+        <div class="grid-stats cols-3 envelope">
+          <div class="stat">
+            <div class="num" id="fund-share">—</div>
+            <div class="lbl">доля сметы не из бюджетов субъекта и муниципалитета</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="fund-outside">—</div>
+            <div class="lbl">федеральные субсидии и КРТ застройщика</div>
+          </div>
+          <div class="stat">
+            <div class="num" id="fund-local">—</div>
+            <div class="lbl">остаётся за областью и городом</div>
+          </div>
+        </div>
+        <div class="funding-viz-charts">
+          <div>
+            <p class="note">Структура капитальных затрат 1,91 млрд ₽</p>
+            <div class="chart-box"><canvas id="chart-fund-cover"></canvas></div>
+          </div>
+          <div>
+            <p class="note">По статьям сметы, млн ₽</p>
+            <div class="chart-box"><canvas id="chart-fund-articles"></canvas></div>
+          </div>
+        </div>
+        <p class="footnote" id="fund-note"></p>
+      </article>
+
+      <section class="funding-group tone-federal">
+        <header class="funding-group-head">
+          <div class="kicker">Федеральное финансирование</div>
+          <h4>Субсидии, нацпроект и зелёная маркировка</h4>
+        </header>
+        <div class="fund-grid">
+          <article class="panel">
+            <div class="kicker">Росводресурсы / Минприроды</div>
+            <h3>Защита от наводнений и иных негативных воздействий вод</h3>
+            <p class="note">Субсидии субъектам на 2026–2028 гг. Заявка области и заключение территориального органа. Цикл на 2027–2029 годы открыт приказом Росводресурсов № 42 от 11.03.2026.</p>
+            <div class="meta">Закрывает берегоукрепление и инженерную защиту. <b>В смете: 383 млн ₽</b> (берег 292 + ливневая канализация 91).</div>
+          </article>
+          <article class="panel">
+            <div class="kicker">Минприроды / Росводресурсы</div>
+            <h3>Федеральный проект «Вода России»</h3>
+            <p class="note">Нацпроект «Экологическое благополучие». К 2030 году — снижение неочищенного сброса на 15%. Акцент на очистные сооружения, русла и укрепление берегов. Озёра Оброчное–Кривое–Песьяное и участок Туры нужно включить в перечень водных объектов субъекта.</p>
+            <div class="meta">Закрывает очистку стока и ливневую канализацию. <b>В смете: 75 млн ₽</b> на три блока очистки, плюс берег и ливнёвка в связке с защитой от наводнений.</div>
+          </article>
+          <article class="panel">
+            <div class="kicker">ВЭБ.РФ · постановление Правительства РФ № 1587</div>
+            <h3>Таксономия зелёных и адаптационных проектов</h3>
+            <p class="note">П. 6.1.2 — экологичное дноуглубление и берегоукрепление; раздел 7 — ландшафты, реки, водоёмы. Сама таксономия средств не выделяет: это маркировка для зелёного кредита или облигаций.</p>
+            <div class="meta">Закрывает потенциально весь проект. <b>В смете: 1 911 млн ₽</b> как «зелёный» проект после верификации эффекта.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="funding-group tone-regional">
+        <header class="funding-group-head">
+          <div class="kicker">Региональное финансирование</div>
+          <h4>Бюджет области, город и казначейский кредит</h4>
+        </header>
+        <div class="fund-grid">
+          <article class="panel">
+            <div class="kicker">Правительство Тюменской области</div>
+            <h3>Региональный бюджет и УКС области</h3>
+            <p class="note">Адресная инвестиционная программа, подряд через государственное казённое учреждение УКС. Прецедент: инженерная защита Туры у улицы Мельникайте / озера Круглое — 1,67 млрд ₽ (2024–2025).</p>
+            <div class="meta">Закрывает гидротехнику и мост. <b>В смете: 631 млн ₽</b> (гидротехника 457 + мост 174).</div>
+          </article>
+          <article class="panel">
+            <div class="kicker">Администрация Тюмени</div>
+            <h3>Муниципальная программа благоустройства</h3>
+            <p class="note">Региональный проект ФКГС, городской бюджет и голосование жителей. мкрн Оброчное и мкрн ДОК нужно внести в перечень голосования на 2027 год и далее как серию объектов, а не как один объект площадью 417 га.</p>
+            <div class="meta">Закрывает очереди благоустройства, не гидротехнические сооружения. <b>В смете: 514 млн ₽</b> активной зоны — очередями, не одним объектом.</div>
+          </article>
+          <article class="panel">
+            <div class="kicker">Федеральное казначейство / субъект</div>
+            <h3>Казначейский инфраструктурный кредит</h3>
+            <p class="note">До 15 лет, 3% годовых, погашение с третьего года. При срыве графика ставка до 6%. Нужен отбор президиумом комиссии по региональному развитию.</p>
+            <div class="meta">Закрывает региональную долю берега, моста и сетей.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="funding-group tone-private">
+        <header class="funding-group-head">
+          <div class="kicker">Частное финансирование</div>
+          <h4>Обязательства застройщика и КРТ</h4>
+        </header>
+        <div class="fund-grid">
+          <article class="panel">
+            <div class="kicker">Город и застройщик</div>
+            <h3>Комплексное развитие территории и обязательства застройщика</h3>
+            <p class="note">Застройщик строит публичную набережную и передаёт её городу. Уже в работе: «Страна Девелопмент» — набережная мкрн ДОКа 733 м; «Брусника» и «Страна Девелопмент» — левый берег около 140 тыс. м². Эти метры нельзя повторно включать в бюджетную заявку.</p>
+            <div class="meta">Закрывает часть мкрн ДОКа: берег 3,53 км и зону для активностей в районе жилой застройки.</div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="block pane" id="scenarii">
+    <div class="wrap">
+      <h2>Сценарии</h2>
+
+      <div class="chips" id="scenario-chips">
+        <button type="button" class="chip" data-sc="low">Низкий</button>
+        <button type="button" class="chip is-on" data-sc="base">Базовый</button>
+        <button type="button" class="chip" data-sc="high">Высокий</button>
+      </div>
+      <p class="sc-lead" id="sc-lead"></p>
+      <div class="grid-stats cols-3" id="sc-kpis"></div>
+
+      <article class="panel" style="margin-top:28px">
+        <h3>Сравнение сценариев по контурам</h3>
+        <p class="note">Базовый сценарий показан абсолютным значением. Низкий и высокий — отклонение от базового: плюс означает больший эффект, минус — меньший.</p>
+        <div class="table-wrap">
+          <table class="data sc-table" id="sc-table"></table>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block pane" id="otchet">
+    <div class="wrap">
+      <h2>Выгрузить отчет</h2>
+
+      <div class="report-formats">
+        <article class="panel report-export">
+          <div class="kicker">Файл Word</div>
+          <h3>Отчет в формате DOCX</h3>
+          <button type="button" class="chip is-on" id="report-print">Выгрузить отчет Word</button>
+          <p class="footnote">Документ по брендбуку «Тюмень 440». Формирование занимает 3–5 секунд.</p>
+        </article>
+        <article class="panel report-export">
+          <div class="kicker">Файл PowerPoint</div>
+          <h3>Отчет в формате PPTX</h3>
+          <button type="button" class="chip is-on" id="report-pptx">Выгрузить отчет PowerPoint</button>
+          <p class="footnote">Презентация по тем же разделам и цифрам, что и отчет Word.</p>
+        </article>
+      </div>
+      <p class="footnote" id="report-status"></p>
+    </div>
+  </section>
+
+  </main>
+
+  <script src="lib/leaflet.js"></script>
+  <script src="lib/chart.umd.min.js"></script>
+  <script src="lib/jszip.min.js"></script>
+  <script>window.__dashboardJSZip = window.JSZip;</script>
+  <script src="lib/docx.umd.js"></script>
+  <script src="lib/pptxgen.bundle.js?v=20261113-pptx9"></script>
+  <script>if (window.__dashboardJSZip) window.JSZip = window.__dashboardJSZip;</script>
+  <script src="js/model.js?v=20260914-nook"></script>
+  <script src="js/geo.js?v=20260913-prk-map"></script>
+  <script src="js/report.js?v=20261113-pptx3"></script>
+  <script src="js/report-docx.js?v=20261113-pptx3"></script>
+  <script src="js/report-pptx.js?v=20261113-pptx15"></script>
+  <script src="js/app.js?v=20260914-toc"></script>
+  <script src="js/metrics.js?v=20261113-pptx"></script>
+</body>
+</html>

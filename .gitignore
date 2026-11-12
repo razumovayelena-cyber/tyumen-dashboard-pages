@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+
+# Production builds
+dist/
+build/
+.next/
+out/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local tooling and IDE files
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Temporary files
+.cache/
+.temp/
+tmp/
+temp/
+
+# Test and coverage output
+coverage/
+.nyc_output/
+
+# Vercel
+.vercel/
+
+# Local preview artifacts
+_pdf_preview/
+.vercel
+.env*
